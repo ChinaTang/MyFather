@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/mu_zhu_zhu_jie_mian_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="添加新的母猪细节" />
+
+    <ListView
+        android:id="@+id/mu_zhu_zhu_jie_mian_list_veiw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mu_zhu_zhu_jie_mian_add" />
+
+</RelativeLayout><!-- From: file:/F:/AndroidStudioWorkSpace/MyFather/res/layout/mu_zhu_zhu_jie_mian.xml -->

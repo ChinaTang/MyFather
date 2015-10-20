@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/xiaozhu_bingjuan_weizhi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="猪圈所在位置"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/linear01"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/xiaozhu_bingjuan_weizhi"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请输入小猪总数"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+    <Button
+        android:layout_below="@id/linear01"
+        android:id="@+id/xiaozhu_bingjuan_duanNai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="请选择阉割时间"/>
+    
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/xiaozhu_bingjuan_duanNai"
+        android:layout_alignRight="@+id/xiaozhu_bingjuan_duanNai"
+        android:layout_below="@+id/xiaozhu_bingjuan_duanNai"
+        android:layout_marginTop="10dp"
+        android:text="请选择小猪卖出日期" />
+    
+    <LinearLayout
+        android:id="@+id/linear02"
+        android:layout_below="@id/linear01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请输入小猪总数"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        </LinearLayout>
+    
+    
+
+</RelativeLayout><!-- From: file:/F:/AndroidStudioWorkSpace/MyFather/res/layout/xiaozhu_bingjuan_detail.xml -->

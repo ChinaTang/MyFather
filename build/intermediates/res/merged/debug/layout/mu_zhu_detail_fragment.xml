@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 检查猪圈位置是否有重复 -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/mu_zhu_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="母猪所在猪圈位置"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/mu_zhu_he_shi_fa_qing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mu_zhu_detail"
+                android:layout_margin="10dp"
+                android:text="母猪发情日期" />
+
+            <Button
+                android:id="@+id/mu_zhu_he_shi_shou_jing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mu_zhu_he_shi_fa_qing"
+                android:layout_margin="10dp"
+                android:text="母猪何时受精" />
+
+            <Button
+                android:id="@+id/mu_zhu_he_shi_chan_zai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mu_zhu_he_shi_shou_jing"
+                android:layout_margin="10dp"
+                android:text="母猪何时产仔" />
+
+            <Button
+                android:id="@+id/save_muhzu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mu_zhu_he_shi_chan_zai"
+                android:layout_margin="10dp"
+                android:text="保存" />
+        </RelativeLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/xiao_zhu_detail_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="添加小猪详细"/>
+
+    <ListView
+        android:id="@+id/xiao_zhu_listview"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout><!-- From: file:/F:/AndroidStudioWorkSpace/MyFather/res/layout/mu_zhu_detail_fragment.xml -->

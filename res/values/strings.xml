@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MyFather</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="hnit">请输入您需要查询猪圈的位置或者编号</string>
+    <string name="Pigdetal">母猪是否受孕</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="calend">选择母猪产仔日期</string>
+    <string name="xiao_zhu_calend">请选择小猪出生日期</string>
+    <string name="xiao_zhu_mai_chu">请选择小猪卖出日期</string>
+    <string name="xiao_zhu_mai_chu_jia_ge">请输入小猪卖出价格</string>
+    <string name="xiao_zhu_zhi_shu">请选择卖出小猪的只数</string>
+    <string name="save">保存</string>
+    <string name="title01">唐总，你好</string>
+    <string name="title02">请选择你要查看的项目</string>
+    <string name="zhu_ye_xiao_zhu">小猪</string>
+    <string name="zhu_ye_si_liao">饲料</string>
+    <string name="zhu_ye_muzhu">母猪</string>
+    <string name="zhu_ye_zhang_mu">账目总览</string>
+    <string name="xiao_zhu_title">请输入小猪所在猪圈位置</string>
+
+</resources>

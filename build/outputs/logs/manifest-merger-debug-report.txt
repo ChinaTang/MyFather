@@ -1,0 +1,67 @@
+-- Merging decision tree log ---
+manifest
+ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:2:1-39:12
+	package
+		ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:3:5-35
+	android:versionName
+		ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:5:5-30
+	android:versionCode
+		ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:4:5-28
+		INJECTED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml
+		INJECTED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml
+	xmlns:android
+		ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:2:11-69
+uses-sdk
+ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:7:5-9:41
+	android:targetSdkVersion
+		ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:9:9-38
+	android:minSdkVersion
+		ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:8:9-34
+application
+ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:11:5-37:19
+	android:label
+		ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:14:9-41
+	android:allowBackup
+		ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:12:9-35
+	android:icon
+		ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:13:9-45
+activity#tang.di.father.app.MainActivity
+ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:16:9-24:20
+	android:label
+		ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:18:13-45
+	android:name
+		ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:17:13-59
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:19:13-23:29
+action#android.intent.action.MAIN
+ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:20:17-69
+	android:name
+		ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:20:25-66
+category#android.intent.category.LAUNCHER
+ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:22:17-77
+	android:name
+		ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:22:27-74
+activity#tang.di.muzhu.MuZhuZhujieMianActivity
+ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:25:9-26:20
+	android:name
+		ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:25:19-71
+activity#tang.di.siliao.SiLiaoActivity
+ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:27:9-28:20
+	android:name
+		ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:27:19-63
+activity#tang.di.xiaozhu.XiaoZhuDetialActivity
+ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:29:9-30:20
+	android:name
+		ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:29:19-71
+activity#tang.di.xiaozhu.XiaoZhuListActivity
+ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:31:9-32:20
+	android:name
+		ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:31:19-69
+activity#tang.di.zhangmuzonglan.ZhangMuActivity
+ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:33:9-34:20
+	android:name
+		ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:33:19-72
+activity#tang.di.muzhu.MuZhuDetailActivity
+ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:35:9-36:20
+	android:name
+		ADDED from F:\AndroidStudioWorkSpace\MyFather\AndroidManifest.xml:35:19-67

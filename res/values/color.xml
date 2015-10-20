@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="balck">#000000</color>
+    <color name="red">#cc0000</color>
+    <color name="blue">#003399</color>
+    <color name="yellow">#FFCC00</color>
+    <color name="hese">#660000</color>
+    <color name="caolv">#336633</color>
+    <color name="zise">#990066</color>
+    <color name="mibai">#FFFF99</color>
+
+</resources>

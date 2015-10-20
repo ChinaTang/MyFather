@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadingEdge="vertical"
+    android:scrollbars="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/choose_mother_pig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="请选择所属母猪"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/xiao_zhu_chu_sheng_ri_qi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/choose_mother_pig"
+            android:layout_margin="10dp"
+            android:text="@string/xiao_zhu_calend" />
+
+        <LinearLayout
+            android:id="@+id/linear01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/xiao_zhu_chu_sheng_ri_qi"
+            android:layout_margin="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请输入小猪只数" />
+
+            <EditText
+                android:id="@+id/xiao_zhu_zhi_shu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/detail_xiao_zhu_duan_nai_ri_qi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear01"
+            android:layout_margin="10dp"
+            android:text="请选择小猪断奶日期" />
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_xiao_zhu_duan_nai_ri_qi"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="是否参与并圈" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/xiao_zhu_yan_ge_ri_qi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear"
+            android:layout_margin="10dp"
+            android:text="请选择阉割日期" />
+
+        <Button
+            android:id="@+id/xiao_zhu_mai_chu_ri_qi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/xiao_zhu_yan_ge_ri_qi"
+            android:layout_margin="10dp"
+            android:text="@string/xiao_zhu_mai_chu" />
+
+        <LinearLayout
+            android:id="@+id/xiao_zhu_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/xiao_zhu_mai_chu_ri_qi"
+            android:layout_margin="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/xiao_zhu_zhi_shu" />
+
+            <EditText
+                android:id="@+id/xiao_zhu_mai_chu_zhi_shu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/xiao_zhu_linear01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/xiao_zhu_linear"
+            android:layout_margin="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/xiao_zhu_mai_chu_jia_ge" />
+
+            <EditText
+                android:id="@+id/xiao_zhu_mai_chu_jia_ge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/xiao_zhu_linear01"
+            android:layout_margin="10dp"
+            android:text="@string/save" />
+    </RelativeLayout>
+
+</ScrollView>
