@@ -15,22 +15,15 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:gravity="center"
-            android:text="请选择所属母猪"
+            android:text="weizhi"
             android:textSize="20dp" />
 
-        <Button
-            android:id="@+id/xiao_zhu_chu_sheng_ri_qi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/choose_mother_pig"
-            android:layout_margin="10dp"
-            android:text="@string/xiao_zhu_calend" />
 
         <LinearLayout
             android:id="@+id/linear01"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/xiao_zhu_chu_sheng_ri_qi"
+            android:layout_below="@id/choose_mother_pig"
             android:layout_margin="10dp"
             android:orientation="horizontal" >
 
@@ -62,7 +55,8 @@
             android:gravity="center"
             android:orientation="horizontal" >
 
-            <Button
+            <TextView
+                android:id="@+id/he_bing"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -134,4 +128,4 @@
             android:text="@string/save" />
     </RelativeLayout>
 
-</ScrollView><!-- From: file:/F:/AndroidStudioWorkSpace/MyFather/res/layout/detal_little_pig.xml -->
+</ScrollView><!-- From: file:/F:/AndroidStudioWorkSpace/TestApp/res/layout/detal_little_pig.xml -->

@@ -44,4 +44,4 @@
         android:text="@string/calend"
         android:visibility="invisible"/>
 
-</RelativeLayout><!-- From: file:/F:/AndroidStudioWorkSpace/MyFather/res/layout/detail_pig.xml -->
+</RelativeLayout><!-- From: file:/F:/AndroidStudioWorkSpace/TestApp/res/layout/detail_pig.xml -->

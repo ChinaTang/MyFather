@@ -4,4 +4,4 @@
     <item android:drawable="@color/zise" android:state_pressed="true"/>
     <item android:drawable="@color/balck"></item>
 
-</selector><!-- From: file:/F:/AndroidStudioWorkSpace/MyFather/res/drawable/xiao_zhu_select.xml -->
+</selector><!-- From: file:/F:/AndroidStudioWorkSpace/TestApp/res/drawable/xiao_zhu_select.xml -->

@@ -1,5 +1,6 @@
 package tang.di.xiaozhu;
 
+import tang.di.date.LittlePigDate;
 import tang.di.muzhu.MuZhuDetailFragment;
 import tang.di.tools.MyFragmentActivity;
 
@@ -17,7 +18,8 @@ public class XiaoZhuDetialActivity extends MyFragmentActivity {
 		Intent intent = getIntent();
 
 		Fragment fragment =
-				XiaoZhuDetialFragment.getInstance(intent.getStringExtra(MuZhuDetailFragment.ADRESS));
+				XiaoZhuDetialFragment.getInstance(
+						(LittlePigDate)intent.getParcelableExtra(XiaoZhuListFragment.date));
 		return fragment;
 	}
 

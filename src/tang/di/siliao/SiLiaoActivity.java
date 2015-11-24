@@ -7,22 +7,19 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 
-public class SiLiaoActivity extends FragmentActivity {
+import tang.di.tools.MyFragmentActivity;
+
+public class SiLiaoActivity extends MyFragmentActivity {
 
 	FragmentManager fm;
 
+	public static final int QUESTIONCODE = 1;
+
 	@Override
-	protected void onCreate(Bundle arg0) {
-		super.onCreate(arg0);
-		setContentView(R.layout.fragment_activity);
-
-		fm = getSupportFragmentManager();
-		Fragment fragment = fm.findFragmentById(R.id.xiaozhu_fragment);
-		if (fragment == null) {
-			fragment = new SiLiaoListFragment();
-			fm.beginTransaction().add(R.id.xiaozhu_fragment, fragment).commit();
-		}
-
+	public Fragment getFragment(){
+		SiLiaoListFragment fragment;
+		return fragment = new SiLiaoListFragment();
 	}
+
 
 }

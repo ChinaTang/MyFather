@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/xiao_zhu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+
+        android:gravity="center"
+        android:text="LP"
+
+         />
+
+    <Button
+        android:id="@+id/si_liao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:gravity="center"
+        android:text="SL"
+        
+        />
+    <Button
+        android:id="@+id/mu_zhu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+
+
+        android:gravity="center"
+        android:text="MP"
+
+         />
+
+    <Button
+        android:id="@+id/zhuang_wu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:text="ZM"
+         />
+
+</LinearLayout>

@@ -1,120 +1,103 @@
 package tang.di.date;
 
 import android.content.Context;
+import android.os.Parcel;
+import android.os.Parcelable;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Date;
 
+import tang.di.database.DataBaseTools;
+
 /**
  * Created by tangdi on 2015/10/15.
  */
-public class LittlePigDate {
+public class LittlePigDate implements Parcelable{
 
-    private static final String FROM = "FROM";
 
     /**
      * 是否两个相加的标志位
      */
-    public static Boolean ISADD = false;
+    private int ISADD = 0;
 
-    public static Boolean IsSell = false;
+    private int IsSell = 0;
 
-    private static final String SELL_FLAG = "SELL_FLAG";
+    /**
+     * 数据库主键，将和UUID共同确定一个
+     */
+    private int _id;
 
-    private static final String ADD_FLAG = "ADD_FLAG";
+    private String QUUID;
 
-    private static final String LITTLEPIGBRITHDAY = "LITTLEPIGBRITHDAY";
-
-    private static final String PIG = "PIG";
-
-    private static final String LITTLEPIGMILK = "LITTLEPIGMILK";
-
-    private static final String LITTLECUTDAY = "LITTLECUTDAY";
-
-    private static final String SELLLITTLEPIGDAY = "SELLLITTLEPIGDAY";
-
-    private static final String SELLLITTLEPIG = "SELLLITTLEPIG";
-
-    private static final String SELLLITTLEPIGPRICE = "SELLLITTLEPIGPRICE";
-
-    private Context context;
-
-    private String mFrom;
-
-    private Date mLittlePigBrithDay;
+    private String mLittlePigBrithDay;
 
     private int mPigs;
 
-    private Date mLittlePigMilk;
+    private String mLittlePigMilk;
 
-    private Date mLittleCutDay;
+    private String mLittleCutDay;
 
-    private Date mSellLittlePigDay;
+    private String mSellLittlePigDay;
 
     private int mSellLittlePig;
 
-    private Long mSellLittlePigPrice;
+    private float mSellLittlePigPrice;
+
+    private int mIsNoMilk;
 
 
+    private String mAdress;
 
 
-    public LittlePigDate(String From, Date mLittlePigBrithDay, Date mLittlePigMilk,
-                         Date mLittleCutDay, Date mSellLittlePigDay, int mPigs, int msellLittlePig,
-                         Long mSellLittlePigPrice){
-        this.mFrom = From;
-        this.mLittlePigBrithDay = mLittlePigBrithDay;
-        this.mPigs = mPigs;
-        this.mLittlePigMilk = mLittlePigMilk;
-        this.mLittleCutDay = mLittleCutDay;
-        this.mSellLittlePigDay = mSellLittlePigDay;
-        this.mSellLittlePig = msellLittlePig;
-        this.mSellLittlePigPrice = mSellLittlePigPrice;
-
+    @Override
+    public void writeToParcel(Parcel dest, int flags){
+        dest.writeInt(ISADD);
+        dest.writeInt(IsSell);
+        dest.writeInt(_id);
+        dest.writeString(QUUID);
+        dest.writeString(mLittlePigBrithDay);
+        dest.writeInt(mPigs);
+        dest.writeString(mLittlePigMilk);
+        dest.writeString(mLittleCutDay);
+        dest.writeString(mSellLittlePigDay);
+        dest.writeInt(mSellLittlePig);
+        dest.writeFloat(mSellLittlePigPrice);
+        dest.writeInt(mIsNoMilk);
+        dest.writeString(mAdress);
     }
 
-    public LittlePigDate(JSONObject json) throws JSONException {
-
-        mFrom = json.getString(FROM);
-        mLittlePigBrithDay = new Date(json.getLong(LITTLEPIGBRITHDAY));
-        mPigs = json.getInt(PIG);
-        mLittlePigMilk = new Date(json.getLong(LITTLEPIGMILK));
-        mLittleCutDay = new Date(json.getLong(LITTLECUTDAY));
-        mSellLittlePigDay = new Date(json.getLong(SELLLITTLEPIGDAY));
-        mSellLittlePig = json.getInt(SELLLITTLEPIGDAY);
-        mSellLittlePigPrice = json.getLong(SELLLITTLEPIGPRICE);
-        ISADD = json.getBoolean(ADD_FLAG);
-        IsSell = json.getBoolean(SELL_FLAG);
+    public LittlePigDate(Parcel parcel){
+        ISADD = parcel.readInt();
+        IsSell = parcel.readInt();
+        _id = parcel.readInt();
+        QUUID = parcel.readString();
+        mLittlePigBrithDay = parcel.readString();
+        mPigs = parcel.readInt();
+        mLittlePigMilk = parcel.readString();
+        mLittleCutDay = parcel.readString();
+        mSellLittlePigDay = parcel.readString();
+        mSellLittlePig = parcel.readInt();
+        mSellLittlePigPrice = parcel.readFloat();
+        mIsNoMilk = parcel.readInt();
+        mAdress = parcel.readString();
     }
 
-    public JSONObject toJSON() throws JSONException {
-
-        JSONObject json = new JSONObject();
-        json.put(FROM, mFrom);
-        json.put(LITTLEPIGBRITHDAY, mLittlePigBrithDay.getTime());
-        json.put(PIG, mPigs);
-        json.put(LITTLEPIGMILK, mLittlePigMilk.getTime());
-        json.put(LITTLECUTDAY, mLittleCutDay.getTime());
-        json.put(SELLLITTLEPIGDAY, mSellLittlePigDay.getTime());
-        json.put(SELLLITTLEPIG, mSellLittlePig);
-        json.put(SELLLITTLEPIGPRICE, mSellLittlePigPrice);
-        json.put(ADD_FLAG, ISADD);
-        json.put(SELL_FLAG, IsSell);
-
-        return json;
-    }
-
-    public LittlePigDate(Context context){
-        this.context = context;
-    }
-
-    public String getmFrom() {
-        return mFrom;
+    public LittlePigDate(){
+        mLittlePigBrithDay = DataBaseTools.DateToString(new Date(System.currentTimeMillis()));
+        mPigs = 0;
+        mLittlePigMilk = DataBaseTools.DateToString(new Date(System.currentTimeMillis()));
+        mLittleCutDay = DataBaseTools.DateToString(new Date(System.currentTimeMillis()));
+        mSellLittlePigDay = DataBaseTools.DateToString(new Date(System.currentTimeMillis()));
+        mSellLittlePig = 0;
+        mSellLittlePigPrice = 0;
+        mIsNoMilk = 0;
+        mAdress = "";
     }
 
     public Date getmLittlePigBrithDay() {
-        return mLittlePigBrithDay;
+        return DataBaseTools.StringToDate(mLittlePigBrithDay);
     }
 
     public int getmPigs() {
@@ -122,30 +105,164 @@ public class LittlePigDate {
     }
 
     public Date getmLittlePigMilk() {
-        return mLittlePigMilk;
+        return DataBaseTools.StringToDate(mLittlePigMilk);
     }
 
     public Date getmLittleCutDay() {
-        return mLittleCutDay;
+        return DataBaseTools.StringToDate(mLittleCutDay);
     }
 
     public Date getmSellLittlePigDay() {
-        return mSellLittlePigDay;
+        return DataBaseTools.StringToDate(mSellLittlePigDay);
     }
 
     public int getmSellLittlePig() {
         return mSellLittlePig;
     }
 
-    public Long getmSellLittlePigPrice() {
+    public float getmSellLittlePigPrice() {
         return mSellLittlePigPrice;
     }
 
-    public static String getSellFlag() {
-        return SELL_FLAG;
+
+
+    public void setISADD(Boolean ISADD) {
+        if(ISADD){
+            this.ISADD = 1;
+        }else{
+            this.ISADD = 0;
+        }
+
     }
 
-    public static String getFROM() {
-        return FROM;
+    public void setIsSell(Boolean isSell) {
+        if(isSell) {
+            this.IsSell = 1;
+        }else{
+            this.IsSell = 0;
+        }
     }
+
+
+    public void setmLittlePigBrithDay(Date mLittlePigBrithDay) {
+        this.mLittlePigBrithDay = DataBaseTools.DateToString(mLittlePigBrithDay);
+    }
+
+    public void setmPigs(int mPigs) {
+        this.mPigs = mPigs;
+    }
+
+    public void setmLittlePigMilk(Date mLittlePigMilk) {
+        this.mLittlePigMilk = DataBaseTools.DateToString(mLittlePigMilk);
+    }
+
+    public void setmLittleCutDay(Date mLittleCutDay) {
+        this.mLittleCutDay = DataBaseTools.DateToString(mLittleCutDay);
+    }
+
+    public void setmSellLittlePigDay(Date mSellLittlePigDay) {
+        this.mSellLittlePigDay = DataBaseTools.DateToString(mSellLittlePigDay);
+    }
+
+    public void setmSellLittlePig(int mSellLittlePig) {
+        this.mSellLittlePig = mSellLittlePig;
+    }
+
+    public void setmSellLittlePigPrice(float mSellLittlePigPrice) {
+        this.mSellLittlePigPrice = mSellLittlePigPrice;
+    }
+
+    public String getQUUID() {
+        return QUUID;
+    }
+
+    public void setQUUID(String QUUID) {
+        this.QUUID = QUUID;
+    }
+
+    public int get_id() {
+        return _id;
+    }
+
+    public void set_id(int _id) {
+        this._id = _id;
+    }
+
+    public boolean ismIsNoMilk() {
+        if(mIsNoMilk == 0){
+            return false;
+        }
+        return true;
+    }
+
+    public void setmIsNoMilk(boolean mIsNoMilk) {
+        if(mIsNoMilk){
+            this.mIsNoMilk = 1;
+        }else{
+            this.mIsNoMilk = 0;
+        }
+    }
+
+    public String getmAdress() {
+        return mAdress;
+    }
+
+    public void setmAdress(String mAdress) {
+        this.mAdress = mAdress;
+    }
+
+    public Boolean getIsSell() {
+        if(IsSell == 0){
+            return false;
+        }
+        return true;
+    }
+
+
+    @Override
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        sb.append("BRIday")
+                //.append(mLittlePigBrithDay.toString())
+                //.append("number")
+                //.append(mPigs)
+                //.append("mLittlePigMilk")
+                //.append(mLittlePigMilk.toString())
+                .append("mIsNoMilk====>")
+                .append(mIsNoMilk)
+                //.append("mAdress")
+                //.append(mAdress)
+                .append("UUID")
+                .append(QUUID);
+        return sb.toString();
+
+    }
+
+    public Boolean getISADD() {
+       if(ISADD == 0){
+          return false;
+       }
+        return true;
+    }
+
+    public static final Parcelable.Creator<LittlePigDate> CREATOR = new Creator<LittlePigDate>() {
+
+        @Override
+        public LittlePigDate[] newArray(int size) {
+            return new LittlePigDate[size];
+        }
+
+        @Override
+        public LittlePigDate createFromParcel(Parcel source) {
+            return new LittlePigDate(source);
+        }
+
+    };
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+
 }

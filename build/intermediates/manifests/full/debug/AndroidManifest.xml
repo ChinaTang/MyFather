@@ -33,6 +33,10 @@
         </activity>
         <activity android:name="tang.di.muzhu.MuZhuDetailActivity" >
         </activity>
+        <activity android:name="tang.di.muzhu.RelevanceLPActivity" >
+        </activity>
+        <activity android:name="tang.di.siliao.FeedDetailActivity" >
+        </activity>
     </application>
 
 </manifest>

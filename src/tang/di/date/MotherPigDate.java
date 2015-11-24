@@ -1,22 +1,32 @@
 package tang.di.date;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.UUID;
 
 /**
  * Created by tangdi on 2015/10/15.
  */
 public class MotherPigDate {
 
-    private static String Adress;
+    private String Adress;
 
     private Date mFaQingdate, mShoujingDate, mChanzaiDate;
 
-    private static ArrayList<LittlePigDate> mList;
+    /**
+     * 查询标识符
+     */
+    private String QunID;
+
+    private ArrayList<LittlePigDate> mList;
 
     private static final String ADRESS = "ADRESS";
 
@@ -28,7 +38,16 @@ public class MotherPigDate {
 
     private static final String LITTLEARRAY = "LITTLEARRAY";
 
-    public MotherPigDate(){}
+
+    public MotherPigDate(){
+        UUID uuid = UUID.randomUUID();
+        QunID = uuid.toString();
+        Adress = null;
+        mList = null;
+        mFaQingdate = new Date(System.currentTimeMillis());
+        mShoujingDate = new Date(System.currentTimeMillis());
+        mChanzaiDate = new Date(System.currentTimeMillis());
+    }
 
 
     public MotherPigDate(String Adress, Date FaQingDate, Date mShoujingDate, Date mChanzaiDate){
@@ -41,48 +60,12 @@ public class MotherPigDate {
 
     }
 
-    public static void addLittlePigList(LittlePigDate item){
+    public void addLittlePigList(LittlePigDate item){
         mList.add(item);
     }
 
-    /**
-     * JSON数据初始化
-     * @param json
-     * @throws JSONException
-     */
-    public MotherPigDate(JSONObject json) throws JSONException {
-        Adress = json.getString(ADRESS);
-        mFaQingdate = new Date(json.getLong(FAQINGDATE));
-        mShoujingDate = new Date(json.getLong(SHOUJINGDATE));
-        mChanzaiDate = new Date(json.getLong(CHANZAIDATE));
-        JSONArray mJSONLittle = json.getJSONArray(LITTLEARRAY);
-        for(int i = 0; i < mJSONLittle.length(); i++){
-            mList.add(new LittlePigDate(mJSONLittle.getJSONObject(i)));
-        }
-    }
 
-    /**
-     * JSON数据JSON化
-     * @return
-     * @throws JSONException
-     */
-    public JSONObject toJSON() throws JSONException {
-        JSONObject json = new JSONObject();
-        json.put(ADRESS, Adress);
-        json.put(FAQINGDATE, mFaQingdate.getTime());
-        json.put(SHOUJINGDATE, mShoujingDate.getTime());
-        json.put(CHANZAIDATE, mChanzaiDate.getTime());
-        JSONArray array = new JSONArray();
-        for(int i = 0; i < mList.size(); i++){
-            array.put(mList.get(i).toJSON());
-        }
-        json.put(LITTLEARRAY, array);
-        return json;
-    }
-
-
-
-    public static String getAdress() {
+    public String getAdress() {
         return Adress;
     }
 
@@ -98,12 +81,12 @@ public class MotherPigDate {
         return mChanzaiDate;
     }
 
-    public static ArrayList<LittlePigDate> getmList() {
+    public ArrayList<LittlePigDate> getmList() {
         return mList;
     }
 
 
-    public static void setAdress(String adress) {
+    public void setAdress(String adress) {
         Adress = adress;
     }
 
@@ -119,8 +102,17 @@ public class MotherPigDate {
         this.mChanzaiDate = mChanzaiDate;
     }
 
-    public static void setmList(ArrayList<LittlePigDate> mList) {
-        MotherPigDate.mList = mList;
+    public void setmList(ArrayList<LittlePigDate> mList) {
+        this.mList = mList;
     }
+
+    public String getQunID() {
+        return QunID;
+    }
+
+    public void setQunID(String qunID) {
+        QunID = qunID;
+    }
+
 
 }

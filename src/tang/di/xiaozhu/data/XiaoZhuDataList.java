@@ -27,6 +27,5 @@ public class XiaoZhuDataList {
 		return list;
 	}
 
-	// 写入文件一次性寫入，作為下次應用啟動順序
 
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/F:/AndroidStudioWorkSpace/MyFather/res/values/color.xml -->
+    <!-- From: file:/F:/AndroidStudioWorkSpace/TestApp/res/values/color.xml -->
     <eat-comment/>
     <color name="balck">#000000</color>
     <color name="blue">#003399</color>
@@ -10,14 +10,20 @@
     <color name="red">#cc0000</color>
     <color name="yellow">#FFCC00</color>
     <color name="zise">#990066</color>
-    <!-- From: file:/F:/AndroidStudioWorkSpace/MyFather/res/values/strings.xml -->
+    <!-- From: file:/F:/AndroidStudioWorkSpace/TestApp/res/values/strings.xml -->
     <eat-comment/>
     <string name="Pigdetal">母猪是否受孕</string>
-    <string name="app_name">MyFather</string>
+    <string name="app_name">TestApp</string>
     <string name="calend">选择母猪产仔日期</string>
+    <string name="he_bing">已经并圈</string>
     <string name="hello_world">Hello world!</string>
     <string name="hnit">请输入您需要查询猪圈的位置或者编号</string>
+    <string name="kind_big">母猪</string>
+    <string name="kind_little">小猪</string>
+    <string name="lp_no_milk">no_milk</string>
+    <string name="lp_number">lp_number</string>
     <string name="no">否</string>
+    <string name="no_he_bing">还未并圈</string>
     <string name="save">保存</string>
     <string name="title01">唐总，你好</string>
     <string name="title02">请选择你要查看的项目</string>

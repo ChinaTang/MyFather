@@ -22,8 +22,8 @@ public abstract class MyFragmentActivity extends FragmentActivity {
 		setContentView(R.layout.fragment_activity);
 		Fragment mfragment = fm.findFragmentById(R.id.xiaozhu_fragment);
 		if (mfragment == null) {
-			mfragment = new MuZhuZhuJieMianFragment();
-			fm.beginTransaction().add(R.id.xiaozhu_fragment, getFragment())
+			fm.beginTransaction()
+					.add(R.id.xiaozhu_fragment, getFragment())
 					.commit();
 		}
 	}

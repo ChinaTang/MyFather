@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">MyFather</string>
+    <string name="app_name">TestApp</string>
     <string name="hello_world">Hello world!</string>
     <string name="hnit">请输入您需要查询猪圈的位置或者编号</string>
     <string name="Pigdetal">母猪是否受孕</string>
@@ -20,5 +20,11 @@
     <string name="zhu_ye_muzhu">母猪</string>
     <string name="zhu_ye_zhang_mu">账目总览</string>
     <string name="xiao_zhu_title">请输入小猪所在猪圈位置</string>
+    <string name="kind_big">母猪</string>
+    <string name="kind_little">小猪</string>
+    <string name="lp_number">lp_number</string>
+    <string name="lp_no_milk">no_milk</string>
+    <string name="he_bing">已经并圈</string>
+    <string name="no_he_bing">还未并圈</string>
 
 </resources>

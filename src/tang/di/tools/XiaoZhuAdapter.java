@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import com.example.myfather.R;
 
-public class XiaoZhuAdapter extends BaseAdapter {
+public class XiaoZhuAdapter extends BaseAdapter{
 
 	private Context mContext;
 	private ArrayList<XiaoZhuData> mData;
